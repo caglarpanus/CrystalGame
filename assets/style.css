@@ -1,0 +1,82 @@
+body{
+    background-image: url("../assets/images/background.jpg");
+    width: 100%;
+    height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+header{
+    background-color: orange;
+    width: 18%;
+    height: 40px;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#manual{
+    background-color: bisque;
+    width: 40%;
+    color: green;
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 2px;
+}
+
+#scores{
+    margin-left: 10px;
+}
+
+#target-number{
+    background-color: green;
+    color:white;
+    width: 15%;
+    height: 100px;
+    margin-top: 10px;
+    font-size: 40px;
+    float: left;
+}
+
+#wins-loses{
+    background-color: aqua;
+    margin-left: 250px;
+    width: 100px;
+    height: 120px;
+    margin-top: 10px;
+}
+
+.images{
+    margin-top: 10px;
+    clear: both;
+    margin-left: 10px;
+}
+
+.img-crystal{
+    width: 80px;
+    height: 80px;
+
+}
+
+.result p{
+    background-color: rgb(64, 133, 64);
+    width: 14%;
+    color: white;
+    font-size: 18px;
+    margin: 5px;
+    margin-left: 10px;
+}
+
+#score{
+    background-color: rgb(64, 133, 64);
+    color: white;
+    font-size: 40px;
+    width: 14%;
+    height: 100px;
+    margin-left: 10px;
+}
