@@ -16,17 +16,21 @@ header{
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     margin-left: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
 }
 
 #manual{
     background-color: bisque;
-    width: 40%;
+    width: 35%;
     color: green;
     font-weight: bold;
     margin-left: 10px;
     font-size: 20px;
     margin-top: 10px;
-    padding: 2px;
+    padding: 5px;
+    line-height: 25px;
+    height: 290px;
 }
 
 #scores{
@@ -43,7 +47,7 @@ header{
     float: left;
 }
 
-#wins-loses{
+#wins-losses{
     background-color: aqua;
     margin-left: 250px;
     width: 100px;
@@ -57,7 +61,7 @@ header{
     margin-left: 10px;
 }
 
-.img-crystal{
+.img1, .img2, .img3, .img4{
     width: 80px;
     height: 80px;
 
@@ -79,4 +83,14 @@ header{
     width: 14%;
     height: 100px;
     margin-left: 10px;
+}
+
+@media screen and (max-width:768px){
+	
+    p{
+        font-size: 12px;
+    }
+    header{
+        font-size: 15px;
+    }
 }

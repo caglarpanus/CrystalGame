@@ -1,42 +1,117 @@
+$(document).ready(function(){
 
-var targetNumber = "";
-var counter = 0;
-var win="";
-var lose="";
-var numberOptions = [1,2,3,4,5,6,7,8,9,10,11,12];
+    var counter = 0;
+    var wins = 0;
+    var losses = 0;
+    // Numbers must be between 19-120.
+    var randomNumber = Math.floor(Math.random()*101+19);
 
+    $("#target-number").text(randomNumber);
+    $("#win").text(wins);
+    $("#lose").text(losses);
+    $("#score").text(counter);
+    console.log(wins, counter, losses,randomNumber);
 
-for (var i= 19; i < 120; i++){
+   var num1 = Math.floor(Math.random()*11+1);
+   var num2 = Math.floor(Math.random()*11+1);
+   var num3 = Math.floor(Math.random()*11+1);
+   var num4 = Math.floor(Math.random()*11+1);
 
-    targetNumber = $("#target-number");
-    
-    $("#target-number").text(targetNumber);
-}
+   // Reset function to reset the game every time we have the result.
+`   `
+   function reset (){
+    var randomNumber = Math.floor(Math.random()*101+19);
+    $("#target-number").text(randomNumber);
 
+    num1 = Math.floor(Math.random()*11+1);
+    num2 = Math.floor(Math.random()*11+1);
+    num3 = Math.floor(Math.random()*11+1);
+    num4 = Math.floor(Math.random()*11+1);
 
+    counter = 0;
+    $("#score").text(counter);
+   }
 
-for (var i = 0; i <numberOptions.length; i++){
+// Button starts function when we click on them. 
 
+   $(".img1").on("click", function(){
+    counter += num1
+    $("#score").text(counter);
+
+        if (counter === randomNumber){
+            wins++;
+            $("#win").text(wins);
+            $("#status").text("You won!");
+            reset();
+        }
+
+        else if (counter > randomNumber){
+            losses++;
+            $("#lose").text(losses);
+            $("#status").text("You lost!");
+            reset();
+        }
         
-        $("img-crystal").attr("data-crystalValue", numberOptions[i]);
+   })
 
-    }
+   $(".img2").on("click", function(){
+    counter += num2
+    $("#score").text(counter);
 
-$(".img-crystal").on("click", function(){
+        if (counter === randomNumber){
+            wins++;
+            $("#win").text(wins);
+            $("#status").text("You won!")
+            reset();
+        }
 
-    var crystalValue = ($(this).attr("data-crystalValue"));
+        else if (counter > randomNumber){
+            losses++;
+            $("#lose").text(losses);
+            $("#status").text("You lost!")
+            reset();
+        }
+        
+   })
 
-    crystalValue = parseInt(crystalValue);
+   $(".img3").on("click", function(){
+    counter += num3
+    $("#score").text(counter);
 
-    counter += crystalValue;
+        if (counter === randomNumber){
+            wins++;
+            $("#win").text(wins);
+            $("#status").text("You won!")
+            reset();
+        }
 
-    $("#score").text(counter)
+        else if (counter > randomNumber){
+            losses++;
+            $("#lose").text(losses);
+            $("#status").text("You lost!")
+            reset();
+        }
+        
+   })
 
-    if (counter === targetNumber) {
-        $("#win-lose").text("You Win!");
-    }
+   $(".img4").on("click", function(){
+    counter += num4
+    $("#score").text(counter);
 
-    else if (counter >= targetNumber){
-        $("#win-lose").text("You Lose!");
-    }
- })
+        if (counter === randomNumber){
+            wins++;
+            $("#win").text(wins);
+            $("#status").text("You won!")
+            reset();
+        }
+
+        else if (counter > randomNumber){
+            losses++;
+            $("#lose").text(losses);
+            $("#status").text("You lost!")
+            reset();
+        }
+        
+   })
+  
+});
